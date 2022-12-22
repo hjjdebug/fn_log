@@ -1,0 +1,621 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	Makefile	/^AR            = ar cqs$/;"	m
+AtomicAddL	fn_atomic.h	/^		inline void AtomicAddL(M& m, unsigned eid)$/;"	f	namespace:FNLog
+AtomicAddLV	fn_atomic.h	/^		inline void AtomicAddLV(M& m, unsigned eid, long long v)$/;"	f	namespace:FNLog
+AtomicLoadC	fn_atomic.h	41;"	d
+AtomicLoadC	fn_atomic.h	43;"	d
+AtomicLoadL	fn_atomic.h	/^		inline long long AtomicLoadL(M& m, unsigned eid)$/;"	f	namespace:FNLog
+AtomicStoreL	fn_atomic.h	/^		inline void AtomicStoreL(M& m, unsigned eid, long long v)$/;"	f	namespace:FNLog
+AutoGuard	fn_atomic.h	/^				inline explicit AutoGuard(Mutex& mtx, bool noop = false) : mutex_(mtx), noop_(noop) $/;"	f	class:FNLog::AutoGuard
+AutoGuard	fn_atomic.h	/^		class AutoGuard$/;"	c	namespace:FNLog
+BLOCK_CLEAN	fn_parse.h	/^        BLOCK_CLEAN,	\/\/当遇到\\r\\n'#'或0时，转变到CLEAN状态$/;"	e	enum:FNLog::BlockType
+BLOCK_KEY	fn_parse.h	/^        BLOCK_KEY,		\/\/遇到正常字符(key键可以开始的字符)，转为key状态$/;"	e	enum:FNLog::BlockType
+BLOCK_NULL	fn_parse.h	/^        BLOCK_NULL,		\/\/开始状态$/;"	e	enum:FNLog::BlockType
+BLOCK_PRE_KEY	fn_parse.h	/^        BLOCK_PRE_KEY,  \/\/遇到'-' block转为PRE_KEY 状态,LINE 转为ARRAY状态$/;"	e	enum:FNLog::BlockType
+BLOCK_PRE_SEP	fn_parse.h	/^        BLOCK_PRE_SEP, \/\/遇到分割字符，转变到key-value 分割状态, 常用的是':‘字符$/;"	e	enum:FNLog::BlockType
+BLOCK_PRE_VAL	fn_parse.h	/^        BLOCK_PRE_VAL,	\/\/遇到':’字符，可转为VAL 状态$/;"	e	enum:FNLog::BlockType
+BLOCK_VAL	fn_parse.h	/^        BLOCK_VAL,		\/\/正常字符，由PRE_VAL 可转至VAL状态$/;"	e	enum:FNLog::BlockType
+BUFFER_LEN	fn_logger.h	/^        static const int BUFFER_LEN = FN_LOG_MAX_LOG_QUEUE_SIZE;$/;"	m	struct:FNLog::RingBuffer
+BatchSetChannelCategoryMacro	fn_log.h	22;"	d
+BatchSetChannelConfig	fn_core.cpp	/^     void BatchSetChannelConfig(Logger& logger, ChannelConfigEnum cce, long long v)$/;"	f	namespace:FNLog
+BatchSetDeviceCategoryMacro	fn_log.h	25;"	d
+BatchSetDeviceConfig	fn_core.cpp	/^     void BatchSetDeviceConfig(Logger& logger, DeviceOutType out_type, DeviceConfigEnum dce, long long v)$/;"	f	namespace:FNLog
+BlockInput	fn_channel.cpp	/^	bool BlockInput(Logger& logger, int channel_id, int priority, int category, long long identify) \/\/阻止Input$/;"	f	namespace:FNLog
+BlockType	fn_parse.h	/^    enum BlockType$/;"	g	namespace:FNLog
+CC	Makefile	/^CC            = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS        = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)$/;"	m
+CHANNEL_ASYNC	my_define.h	/^		CHANNEL_ASYNC,$/;"	e	enum:FNLog::ChannelType
+CHANNEL_CFG_CATEGORY	my_define.h	/^		CHANNEL_CFG_CATEGORY,  $/;"	e	enum:FNLog::ChannelConfigEnum
+CHANNEL_CFG_CATEGORY_EXTEND	my_define.h	/^		CHANNEL_CFG_CATEGORY_EXTEND, $/;"	e	enum:FNLog::ChannelConfigEnum
+CHANNEL_CFG_CATEGORY_FILTER	my_define.h	/^		CHANNEL_CFG_CATEGORY_FILTER,$/;"	e	enum:FNLog::ChannelConfigEnum
+CHANNEL_CFG_IDENTIFY	my_define.h	/^		CHANNEL_CFG_IDENTIFY,$/;"	e	enum:FNLog::ChannelConfigEnum
+CHANNEL_CFG_IDENTIFY_EXTEND	my_define.h	/^		CHANNEL_CFG_IDENTIFY_EXTEND,$/;"	e	enum:FNLog::ChannelConfigEnum
+CHANNEL_CFG_IDENTIFY_FILTER	my_define.h	/^		CHANNEL_CFG_IDENTIFY_FILTER,$/;"	e	enum:FNLog::ChannelConfigEnum
+CHANNEL_CFG_MAX_ID	my_define.h	/^		CHANNEL_CFG_MAX_ID$/;"	e	enum:FNLog::ChannelConfigEnum
+CHANNEL_CFG_PRIORITY	my_define.h	/^		CHANNEL_CFG_PRIORITY, $/;"	e	enum:FNLog::ChannelConfigEnum
+CHANNEL_LOG_HOLD	my_define.h	/^		CHANNEL_LOG_HOLD,$/;"	e	enum:FNLog::ChannelLogEnum
+CHANNEL_LOG_MAX_ID	my_define.h	/^		CHANNEL_LOG_MAX_ID$/;"	e	enum:FNLog::ChannelLogEnum
+CHANNEL_LOG_PROCESSED	my_define.h	/^		CHANNEL_LOG_PROCESSED = CHANNEL_LOG_PUSH + 8,$/;"	e	enum:FNLog::ChannelLogEnum
+CHANNEL_LOG_PUSH	my_define.h	/^		CHANNEL_LOG_PUSH,$/;"	e	enum:FNLog::ChannelLogEnum
+CHANNEL_STATE_FINISH	my_define.h	/^		CHANNEL_STATE_FINISH,$/;"	e	enum:FNLog::ChannelState
+CHANNEL_STATE_NULL	my_define.h	/^		CHANNEL_STATE_NULL = 0,$/;"	e	enum:FNLog::ChannelState
+CHANNEL_STATE_RUNNING	my_define.h	/^		CHANNEL_STATE_RUNNING,$/;"	e	enum:FNLog::ChannelState
+CHANNEL_STATE_WAITING_FINISH	my_define.h	/^		CHANNEL_STATE_WAITING_FINISH,$/;"	e	enum:FNLog::ChannelState
+CHANNEL_SYNC	my_define.h	/^		CHANNEL_SYNC,$/;"	e	enum:FNLog::ChannelType
+CHK_DIR_EXISTS	Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHUNK_SIZE	filehandler.h	/^    static const int CHUNK_SIZE = 128;$/;"	m	namespace:FNLog
+CHUNK_SIZE	fn_file.h	/^    static const int CHUNK_SIZE = 128;$/;"	m	namespace:FNLog
+COMPRESS	Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	Makefile	/^COPY_DIR      = cp -f -R$/;"	m
+COPY_FILE	Makefile	/^COPY_FILE     = cp -f$/;"	m
+CXX	Makefile	/^CXX           = g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS      = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)$/;"	m
+Channel	fn_logger.h	/^    struct Channel$/;"	s	namespace:FNLog
+ChannelConfigEnum	my_define.h	/^	enum ChannelConfigEnum$/;"	g	namespace:FNLog
+ChannelLogEnum	my_define.h	/^	enum ChannelLogEnum$/;"	g	namespace:FNLog
+ChannelState	my_define.h	/^	enum ChannelState$/;"	g	namespace:FNLog
+ChannelType	my_define.h	/^	enum ChannelType$/;"	g	namespace:FNLog
+CleanChannels	fn_core.cpp	/^     int CleanChannels(Logger& logger)$/;"	f	namespace:FNLog
+DEFINES	Makefile	/^DEFINES       = -DQT_GUI_LIB -DQT_CORE_LIB$/;"	m
+DEL_DIR	Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	Makefile	/^DESTDIR       = $/;"	m
+DEVICE_CFG_ABLE	my_define.h	/^		DEVICE_CFG_ABLE, $/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_CATEGORY	my_define.h	/^		DEVICE_CFG_CATEGORY,  $/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_CATEGORY_EXTEND	my_define.h	/^		DEVICE_CFG_CATEGORY_EXTEND, $/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_CATEGORY_FILTER	my_define.h	/^		DEVICE_CFG_CATEGORY_FILTER,$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_FILE_LIMIT_SIZE	my_define.h	/^		DEVICE_CFG_FILE_LIMIT_SIZE, $/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_FILE_ROLLBACK	my_define.h	/^		DEVICE_CFG_FILE_ROLLBACK,$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_FILE_STUFF_UP	my_define.h	/^		DEVICE_CFG_FILE_STUFF_UP,$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_IDENTIFY	my_define.h	/^		DEVICE_CFG_IDENTIFY,$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_IDENTIFY_EXTEND	my_define.h	/^		DEVICE_CFG_IDENTIFY_EXTEND,$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_IDENTIFY_FILTER	my_define.h	/^		DEVICE_CFG_IDENTIFY_FILTER,$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_MAX_ID	my_define.h	/^		DEVICE_CFG_MAX_ID$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_PRIORITY	my_define.h	/^		DEVICE_CFG_PRIORITY,  $/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_UDP_IP	my_define.h	/^		DEVICE_CFG_UDP_IP,$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_CFG_UDP_PORT	my_define.h	/^		DEVICE_CFG_UDP_PORT,$/;"	e	enum:FNLog::DeviceConfigEnum
+DEVICE_LOG_CUR_FILE_CREATE_DAY	my_define.h	/^		DEVICE_LOG_CUR_FILE_CREATE_DAY, $/;"	e	enum:FNLog::DeviceLogEnum
+DEVICE_LOG_CUR_FILE_CREATE_TIMESTAMP	my_define.h	/^		DEVICE_LOG_CUR_FILE_CREATE_TIMESTAMP,  $/;"	e	enum:FNLog::DeviceLogEnum
+DEVICE_LOG_CUR_FILE_SIZE	my_define.h	/^		DEVICE_LOG_CUR_FILE_SIZE, $/;"	e	enum:FNLog::DeviceLogEnum
+DEVICE_LOG_LAST_TRY_CREATE_ERROR	my_define.h	/^		DEVICE_LOG_LAST_TRY_CREATE_ERROR,$/;"	e	enum:FNLog::DeviceLogEnum
+DEVICE_LOG_LAST_TRY_CREATE_TIMESTAMP	my_define.h	/^		DEVICE_LOG_LAST_TRY_CREATE_TIMESTAMP,$/;"	e	enum:FNLog::DeviceLogEnum
+DEVICE_LOG_MAX_ID	my_define.h	/^		DEVICE_LOG_MAX_ID$/;"	e	enum:FNLog::DeviceLogEnum
+DEVICE_LOG_TOTAL_WRITE_BYTE	my_define.h	/^		DEVICE_LOG_TOTAL_WRITE_BYTE,  $/;"	e	enum:FNLog::DeviceLogEnum
+DEVICE_LOG_TOTAL_WRITE_LINE	my_define.h	/^		DEVICE_LOG_TOTAL_WRITE_LINE,$/;"	e	enum:FNLog::DeviceLogEnum
+DEVICE_OUT_FILE	my_define.h	/^		DEVICE_OUT_FILE,$/;"	e	enum:FNLog::DeviceOutType
+DEVICE_OUT_NULL	my_define.h	/^		DEVICE_OUT_NULL,$/;"	e	enum:FNLog::DeviceOutType
+DEVICE_OUT_SCREEN	my_define.h	/^		DEVICE_OUT_SCREEN,$/;"	e	enum:FNLog::DeviceOutType
+DEVICE_OUT_UDP	my_define.h	/^		DEVICE_OUT_UDP,$/;"	e	enum:FNLog::DeviceOutType
+DEVICE_OUT_VIRTUAL	my_define.h	/^		DEVICE_OUT_VIRTUAL,$/;"	e	enum:FNLog::DeviceOutType
+DIST	Makefile	/^DIST          = \/opt\/Qt5.14.0\/5.14.0\/gcc_64\/mkspecs\/features\/spec_pre.prf \\$/;"	m
+DISTDIR	Makefile	/^DISTDIR = \/home\/hjj\/gitSource\/fn_log\/.tmp\/fn_log1.0.0$/;"	m
+DISTNAME	Makefile	/^DISTNAME      = fn_log1.0.0$/;"	m
+Device	fn_logger.h	/^    struct Device$/;"	s	namespace:FNLog
+DeviceConfigEnum	my_define.h	/^	enum DeviceConfigEnum$/;"	g	namespace:FNLog
+DeviceLogEnum	my_define.h	/^	enum DeviceLogEnum$/;"	g	namespace:FNLog
+DeviceOutType	my_define.h	/^	enum DeviceOutType$/;"	g	namespace:FNLog
+DispatchLog	fn_channel.cpp	/^	void DispatchLog(Logger & logger, Channel& channel, LogData& log)$/;"	f	namespace:FNLog
+EQ	Makefile	/^EQ            = =$/;"	m
+EnableAllFileDevice	fn_log.h	/^    inline void EnableAllFileDevice(Logger& logger, bool enable) { BatchSetDeviceConfig(logger, DEVICE_OUT_FILE, DEVICE_CFG_ABLE, enable); }$/;"	f	namespace:FNLog
+EnableAllScreenDevice	fn_log.h	/^    inline void EnableAllScreenDevice(Logger& logger, bool enable) { BatchSetDeviceConfig(logger, DEVICE_OUT_SCREEN, DEVICE_CFG_ABLE, enable); }$/;"	f	namespace:FNLog
+EnableAllUDPDevice	fn_log.h	/^    inline void EnableAllUDPDevice(Logger& logger, bool enable) { BatchSetDeviceConfig(logger, DEVICE_OUT_UDP, DEVICE_CFG_ABLE, enable); }$/;"	f	namespace:FNLog
+EnterProcChannel	fn_channel.cpp	/^	void EnterProcChannel(Logger& logger, int channel_id)$/;"	f	namespace:FNLog
+EnterProcDevice	fn_channel.cpp	/^	void EnterProcDevice(Logger& logger, int channel_id, int device_id, LogData & log)$/;"	f	namespace:FNLog
+EnterProcOutFileDevice	fn_out_file_device.h	/^    inline void EnterProcOutFileDevice(Logger& logger, int channel_id, int device_id, LogData& log)$/;"	f	namespace:FNLog
+EnterProcOutScreenDevice	fn_out_screen_device.h	/^    inline void EnterProcOutScreenDevice(Logger& logger, int channel_id, int device_id, LogData& log)$/;"	f	namespace:FNLog
+EnterProcOutUDPDevice	fn_out_udp_device.h	/^    inline void EnterProcOutUDPDevice(Logger& logger, int channel_id, int device_id, LogData& log)$/;"	f	namespace:FNLog
+EnterProcOutVirtualDevice	fn_out_virtual_device.h	/^    inline void EnterProcOutVirtualDevice(Logger& logger, int channel_id, int device_id, LogData& log)$/;"	f	namespace:FNLog
+FNLOG_INVALID_SOCKET	fn_file.h	/^    static const int FNLOG_INVALID_SOCKET = -1;$/;"	m	class:UDPHandler
+FNLOG_INVALID_SOCKET	udphandler.h	/^    static const int FNLOG_INVALID_SOCKET = -1;$/;"	m	class:UDPHandler
+FNLog	filehandler.cpp	/^namespace FNLog$/;"	n	file:
+FNLog	filehandler.h	/^namespace FNLog$/;"	n
+FNLog	fn_atomic.h	/^namespace FNLog$/;"	n
+FNLog	fn_channel.cpp	/^namespace FNLog$/;"	n	file:
+FNLog	fn_channel.h	/^namespace FNLog$/;"	n
+FNLog	fn_core.cpp	/^namespace FNLog$/;"	n	file:
+FNLog	fn_core.h	/^namespace FNLog$/;"	n
+FNLog	fn_file.h	/^namespace FNLog$/;"	n
+FNLog	fn_fmt.cpp	/^namespace FNLog$/;"	n	file:
+FNLog	fn_fmt.h	/^namespace FNLog$/;"	n
+FNLog	fn_load.cpp	/^namespace FNLog$/;"	n	file:
+FNLog	fn_load.h	/^namespace FNLog$/;"	n
+FNLog	fn_log.h	/^namespace FNLog   $/;"	n
+FNLog	fn_logger.cpp	/^namespace FNLog$/;"	n	file:
+FNLog	fn_logger.h	/^namespace FNLog$/;"	n
+FNLog	fn_out_file_device.h	/^namespace FNLog$/;"	n
+FNLog	fn_out_screen_device.h	/^namespace FNLog$/;"	n
+FNLog	fn_out_udp_device.h	/^namespace FNLog$/;"	n
+FNLog	fn_out_virtual_device.h	/^namespace FNLog$/;"	n
+FNLog	fn_parse.cpp	/^namespace FNLog$/;"	n	file:
+FNLog	fn_parse.h	/^namespace FNLog$/;"	n
+FNLog	fn_startlog.cpp	/^namespace FNLog$/;"	n	file:
+FNLog	fn_startlog.h	/^namespace FNLog$/;"	n
+FNLog	fn_stream.h	/^namespace FNLog$/;"	n
+FNLog	my_define.h	/^namespace FNLog$/;"	n
+FN_LOG_HOTUPDATE_INTERVEL	my_define.h	12;"	d
+FN_LOG_MAX_CHANNEL_SIZE	my_define.h	3;"	d
+FN_LOG_MAX_LOG_QUEUE_SIZE	my_define.h	9;"	d
+FN_LOG_MAX_LOG_SIZE	my_define.h	6;"	d
+FN_MAX	fn_atomic.h	/^		inline V FN_MAX(V x, V y)$/;"	f	namespace:FNLog
+FN_MIN	fn_atomic.h	/^		inline V FN_MIN(V x, V y) $/;"	f	namespace:FNLog
+FastStartDebugLogger	fn_startlog.cpp	/^	 int FastStartDebugLogger()$/;"	f	namespace:FNLog
+FastStartDefaultLogger	fn_startlog.cpp	/^	int FastStartDefaultLogger(const std::string& config_text)$/;"	f	namespace:FNLog
+FastStartDefaultLogger	fn_startlog.cpp	/^     int FastStartDefaultLogger()$/;"	f	namespace:FNLog
+FileHandler	filehandler.cpp	/^    FileHandler::FileHandler()$/;"	f	class:FNLog::FileHandler
+FileHandler	filehandler.h	/^    class FileHandler$/;"	c	namespace:FNLog
+FileHandler	fn_file.h	/^    FileHandler::FileHandler()$/;"	f	class:FNLog::FileHandler
+FileHandler	fn_file.h	/^    class FileHandler$/;"	c	namespace:FNLog
+FmtName	fn_out_file_device.h	/^    inline std::string FmtName(const std::string& fmt_name, int channel_id, int device_id, const struct tm& t)$/;"	f	namespace:FNLog
+GetChannelLog	fn_core.cpp	/^     long long GetChannelLog(Logger& logger, int channel_id, ChannelLogEnum field)$/;"	f	namespace:FNLog
+GetDefaultLogger	fn_startlog.cpp	/^	Logger& GetDefaultLogger()$/;"	f	namespace:FNLog
+GetDeviceConfig	fn_core.cpp	/^     long long GetDeviceConfig(Logger& logger, int channel_id, int device_id, DeviceConfigEnum field)$/;"	f	namespace:FNLog
+GetDeviceLog	fn_core.cpp	/^     long long GetDeviceLog(Logger& logger, int channel_id, int device_id, DeviceLogEnum field)$/;"	f	namespace:FNLog
+HOTUPDATE_INTERVEL	fn_logger.h	/^        static const int HOTUPDATE_INTERVEL = FN_LOG_HOTUPDATE_INTERVEL;$/;"	m	class:FNLog::Logger
+HoldChannel	fn_channel.cpp	/^	int HoldChannel(Logger& logger, int channel_id, int priority, int category, long long identify)$/;"	f	namespace:FNLog
+HotUpdateLogger	fn_load.cpp	/^    int HotUpdateLogger(Logger& logger, int channel_id)$/;"	f	namespace:FNLog
+INCPATH	Makefile	/^INCPATH       = -I. -I. -I\/opt\/Qt5.14.0\/5.14.0\/gcc_64\/include -I\/opt\/Qt5.14.0\/5.14.0\/gcc_64\/include\/QtGui -I\/opt\/Qt5.14.0\/5.14.0\/gcc_64\/include\/QtCore -I. -isystem \/usr\/include\/libdrm -I\/opt\/Qt5.14.0\/5.14.0\/gcc_64\/mkspecs\/linux-g++$/;"	m
+INSTALL_DIR	Makefile	/^INSTALL_DIR   = cp -f -R$/;"	m
+INSTALL_FILE	Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+InitFromYMAL	fn_load.cpp	/^    int InitFromYMAL(Logger& logger, const std::string& text, const std::string& path)$/;"	f	namespace:FNLog
+InitFromYMALFile	fn_load.cpp	/^    int InitFromYMALFile(Logger& logger, const std::string& path)$/;"	f	namespace:FNLog
+InitLogData	fn_channel.cpp	/^	void InitLogData(Logger& logger, LogData& log, int channel_id, int priority, int category, unsigned long long identify, unsigned int prefix)$/;"	f	namespace:FNLog
+InitLogger	fn_logger.cpp	/^     void InitLogger(Logger& logger)$/;"	f	namespace:FNLog
+InitState	fn_parse.cpp	/^	void InitState(LexState& state)$/;"	f	namespace:FNLog
+KEEP_INPUT_QUICK_EDIT	fn_file.h	73;"	d
+LFLAGS	Makefile	/^LFLAGS        = -Wl,-rpath,\/opt\/Qt5.14.0\/5.14.0\/gcc_64\/lib$/;"	m
+LIBS	Makefile	/^LIBS          = $(SUBLIBS) \/opt\/Qt5.14.0\/5.14.0\/gcc_64\/lib\/libQt5Gui.so \/opt\/Qt5.14.0\/5.14.0\/gcc_64\/lib\/libQt5Core.so -lGL -lpthread   $/;"	m
+LINE_ARRAY	fn_parse.h	/^        LINE_ARRAY,		\/\/其它状态,要求以'-'开始$/;"	e	enum:FNLog::LineType
+LINE_BLANK	fn_parse.h	/^        LINE_BLANK,		\/\/空行,例如#开始$/;"	e	enum:FNLog::LineType
+LINE_EOF	fn_parse.h	/^        LINE_EOF,		\/\/文件尾$/;"	e	enum:FNLog::LineType
+LINE_NULL	fn_parse.h	/^        LINE_NULL,		\/\/开始状态$/;"	e	enum:FNLog::LineType
+LINK	Makefile	/^LINK          = g++$/;"	m
+LOGA	fn_macro.h	72;"	d
+LOGD	fn_macro.h	68;"	d
+LOGE	fn_macro.h	71;"	d
+LOGF	fn_macro.h	73;"	d
+LOGFMTA	fn_macro.h	119;"	d
+LOGFMTD	fn_macro.h	115;"	d
+LOGFMTE	fn_macro.h	118;"	d
+LOGFMTF	fn_macro.h	120;"	d
+LOGFMTI	fn_macro.h	116;"	d
+LOGFMTT	fn_macro.h	114;"	d
+LOGFMTW	fn_macro.h	117;"	d
+LOGFMT_ALARM	fn_macro.h	112;"	d
+LOGFMT_DEBUG	fn_macro.h	108;"	d
+LOGFMT_ERROR	fn_macro.h	111;"	d
+LOGFMT_FATAL	fn_macro.h	113;"	d
+LOGFMT_INFO	fn_macro.h	109;"	d
+LOGFMT_TRACE	fn_macro.h	107;"	d
+LOGFMT_WARN	fn_macro.h	110;"	d
+LOGGER_STATE_CLOSING	my_define.h	/^		LOGGER_STATE_CLOSING,$/;"	e	enum:FNLog::LoggerState
+LOGGER_STATE_INITING	my_define.h	/^		LOGGER_STATE_INITING,$/;"	e	enum:FNLog::LoggerState
+LOGGER_STATE_RUNNING	my_define.h	/^		LOGGER_STATE_RUNNING,$/;"	e	enum:FNLog::LoggerState
+LOGGER_STATE_UNINIT	my_define.h	/^		LOGGER_STATE_UNINIT = 0,$/;"	e	enum:FNLog::LoggerState
+LOGI	fn_macro.h	69;"	d
+LOGT	fn_macro.h	67;"	d
+LOGW	fn_macro.h	70;"	d
+LOG_ALARM	fn_macro.h	65;"	d
+LOG_DEBUG	fn_macro.h	61;"	d
+LOG_ERROR	fn_macro.h	64;"	d
+LOG_FATAL	fn_macro.h	66;"	d
+LOG_FORMAT	fn_macro.h	76;"	d
+LOG_FORMAT	fn_macro.h	92;"	d
+LOG_INFO	fn_macro.h	62;"	d
+LOG_PREFIX_ALL	my_define.h	/^		LOG_PREFIX_ALL = 0xff,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_DEFAULT	my_define.h	/^		LOG_PREFIX_DEFAULT = LOG_PREFIX_TIMESTAMP | LOG_PREFIX_PRIORITY | LOG_PREFIX_FILE | LOG_PREFIX_FUNCTION,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_DESC	my_define.h	/^		LOG_PREFIX_DESC = 0x10,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_FILE	my_define.h	/^		LOG_PREFIX_FILE = 0x20,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_FUNCTION	my_define.h	/^		LOG_PREFIX_FUNCTION = 0x40,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_NAME	my_define.h	/^		LOG_PREFIX_NAME = 0x8,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_NULL	my_define.h	/^		LOG_PREFIX_NULL = 0x0,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_PRIORITY	my_define.h	/^		LOG_PREFIX_PRIORITY = 0x2,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_THREAD	my_define.h	/^		LOG_PREFIX_THREAD = 0x4,$/;"	e	enum:FNLog::LogPrefix
+LOG_PREFIX_TIMESTAMP	my_define.h	/^		LOG_PREFIX_TIMESTAMP = 0x1,$/;"	e	enum:FNLog::LogPrefix
+LOG_SIZE	fn_logger.h	/^        static const int LOG_SIZE = FN_LOG_MAX_LOG_SIZE;$/;"	m	struct:FNLog::LogData
+LOG_STREAM_DEFAULT_LOGGER	fn_macro.h	14;"	d
+LOG_STREAM_DEFAULT_LOGGER_WITH_PREFIX	fn_macro.h	16;"	d
+LOG_STREAM_ORIGIN	fn_macro.h	10;"	d
+LOG_TRACE	fn_macro.h	60;"	d
+LOG_TYPE_MAX	my_define.h	/^		LOG_TYPE_MAX,$/;"	e	enum:FNLog::LogType
+LOG_TYPE_NULL	my_define.h	/^		LOG_TYPE_NULL,$/;"	e	enum:FNLog::LogType
+LOG_WARN	fn_macro.h	63;"	d
+LexState	fn_parse.h	/^    struct LexState$/;"	s	namespace:FNLog
+Lex_Line	fn_parse.cpp	/^    int Lex_Line(LexState& ls) \/\/词法分析1行, 定位key,val, 返回正常或错误$/;"	f	namespace:FNLog
+Line	fn_parse.h	/^    struct Line$/;"	s	namespace:FNLog
+LineType	fn_parse.h	/^    enum LineType$/;"	g	namespace:FNLog
+LoadAndStartDefaultLogger	fn_startlog.cpp	/^	 int LoadAndStartDefaultLogger(const std::string& config_path)$/;"	f	namespace:FNLog
+LoadAndStartLogger	fn_startlog.cpp	/^	 int LoadAndStartLogger(Logger& logger, const std::string& confg_path)$/;"	f	namespace:FNLog
+LoadSharedMemory	fn_load.cpp	/^    int LoadSharedMemory(Logger& logger)$/;"	f	namespace:FNLog
+LogAlarm	fn_macro.h	31;"	d
+LogAlarmPack	fn_macro.h	50;"	d
+LogAlarmStream	fn_macro.h	24;"	d
+LogBlankAlign	fn_stream.h	/^    struct LogBlankAlign$/;"	s	namespace:FNLog
+LogData	fn_logger.h	/^    struct LogData$/;"	s	namespace:FNLog
+LogDebug	fn_macro.h	27;"	d
+LogDebugPack	fn_macro.h	46;"	d
+LogDebugStream	fn_macro.h	20;"	d
+LogError	fn_macro.h	30;"	d
+LogErrorPack	fn_macro.h	49;"	d
+LogErrorStream	fn_macro.h	23;"	d
+LogFatal	fn_macro.h	32;"	d
+LogFatalPack	fn_macro.h	51;"	d
+LogFatalStream	fn_macro.h	25;"	d
+LogInfo	fn_macro.h	28;"	d
+LogInfoPack	fn_macro.h	47;"	d
+LogInfoStream	fn_macro.h	21;"	d
+LogPercent	fn_stream.h	/^        LogPercent(float v) :v_(v) {}$/;"	f	struct:FNLog::LogPercent
+LogPercent	fn_stream.h	/^    struct LogPercent$/;"	s	namespace:FNLog
+LogPrefix	my_define.h	/^	enum LogPrefix$/;"	g	namespace:FNLog
+LogPriority	my_define.h	/^	enum LogPriority$/;"	g	namespace:FNLog
+LogState	my_define.h	/^	enum LogState$/;"	g	namespace:FNLog
+LogStream	fn_stream.h	/^        explicit LogStream(Logger& logger, int channel_id, int priority, int category, long long identify,$/;"	f	class:FNLog::LogStream
+LogStream	fn_stream.h	/^    class LogStream$/;"	c	namespace:FNLog
+LogTemplatePack	fn_macro.h	/^FNLog::LogStream& LogTemplatePack(FNLog::LogStream&& ls, Args&& ... args)$/;"	f
+LogTemplatePack	fn_macro.h	/^inline FNLog::LogStream& LogTemplatePack(FNLog::LogStream&& ls)$/;"	f
+LogTrace	fn_macro.h	26;"	d
+LogTracePack	fn_macro.h	45;"	d
+LogTraceStream	fn_macro.h	19;"	d
+LogType	my_define.h	/^	enum LogType$/;"	g	namespace:FNLog
+LogWarn	fn_macro.h	29;"	d
+LogWarnPack	fn_macro.h	48;"	d
+LogWarnStream	fn_macro.h	22;"	d
+Logger	fn_logger.cpp	/^	Logger::Logger()$/;"	f	class:FNLog::Logger
+Logger	fn_logger.h	/^    class Logger$/;"	c	namespace:FNLog
+LoggerState	my_define.h	/^	enum LoggerState$/;"	g	namespace:FNLog
+MAKEFILE	Makefile	/^MAKEFILE      = Makefile$/;"	m
+MARK_HOLD	my_define.h	/^		MARK_HOLD,$/;"	e	enum:FNLog::LogState
+MARK_INVALID	my_define.h	/^		MARK_INVALID,$/;"	e	enum:FNLog::LogState
+MARK_READY	my_define.h	/^		MARK_READY$/;"	e	enum:FNLog::LogState
+MAX_CHANNEL_SIZE	fn_logger.h	/^        static const int MAX_CHANNEL_SIZE = FN_LOG_MAX_CHANNEL_SIZE;$/;"	m	struct:FNLog::SHMLogger
+MAX_CHANNEL_SIZE	fn_logger.h	/^        static const int MAX_CHANNEL_SIZE = SHMLogger::MAX_CHANNEL_SIZE;$/;"	m	class:FNLog::Logger
+MAX_CONTAINER_DEPTH	fn_stream.h	/^        static const int MAX_CONTAINER_DEPTH = 5;$/;"	m	class:FNLog::LogStream
+MAX_DEVICE_SIZE	fn_logger.h	/^        static const int MAX_DEVICE_SIZE = 20;$/;"	m	struct:FNLog::Channel
+MAX_LOGGER_DESC_LEN	fn_logger.h	/^        static const int MAX_LOGGER_DESC_LEN = 50;$/;"	m	class:FNLog::Logger
+MAX_LOGGER_NAME_LEN	fn_logger.h	/^        static const int MAX_LOGGER_NAME_LEN = 250;$/;"	m	class:FNLog::Logger
+MAX_LOGGER_NAME_LEN	fn_logger.h	/^        static const int MAX_LOGGER_NAME_LEN = 50;$/;"	m	struct:FNLog::Device
+MAX_PATH_LEN	fn_logger.h	/^        static const int MAX_PATH_LEN = 200;$/;"	m	struct:FNLog::Device
+MAX_PATH_SYS_LEN	fn_logger.h	/^        static const int MAX_PATH_SYS_LEN = 255;$/;"	m	struct:FNLog::Device
+MAX_ROLLBACK_LEN	fn_logger.h	/^        static const int MAX_ROLLBACK_LEN = 4;$/;"	m	struct:FNLog::Device
+MAX_ROLLBACK_PATHS	fn_logger.h	/^        static const int MAX_ROLLBACK_PATHS = 5;$/;"	m	struct:FNLog::Device
+MKDIR	Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	Makefile	/^MOVE          = mv -f$/;"	m
+MakeFileName	fn_out_file_device.h	/^    inline std::string MakeFileName(const std::string& fmt_name, int channel_id, int device_id, const struct tm& t)$/;"	f	namespace:FNLog
+MakePathName	fn_out_file_device.h	/^    inline std::string MakePathName(const std::string& fmt_name, int channel_id, int device_id, const struct tm& t)$/;"	f	namespace:FNLog
+NFLOG_HAVE_LIBPROC	fn_file.h	109;"	d
+NewChannel	fn_core.cpp	/^     Channel* NewChannel(Logger& logger, int channel_type)$/;"	f	namespace:FNLog
+NewDevice	fn_core.cpp	/^     Device* NewDevice(Logger& logger, Channel& channel, int out_type)$/;"	f	namespace:FNLog
+OBJECTS	Makefile	/^OBJECTS       = main.o \\$/;"	m
+OBJECTS_DIR	Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OpenFileDevice	fn_out_file_device.h	/^    inline void OpenFileDevice(Logger & logger, Channel & channel, Device & device, FileHandler & writer, LogData & log)$/;"	f	namespace:FNLog
+PEC_CHANNEL_INDEX_NOT_SEQUENCE	fn_parse.h	/^        PEC_CHANNEL_INDEX_NOT_SEQUENCE,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_CHANNEL_INDEX_OUT_MAX	fn_parse.h	/^        PEC_CHANNEL_INDEX_OUT_MAX,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_CHANNEL_NOT_ARRAY	fn_parse.h	/^        PEC_CHANNEL_NOT_ARRAY,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_DEVICE_INDEX_NOT_SEQUENCE	fn_parse.h	/^        PEC_DEVICE_INDEX_NOT_SEQUENCE,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_DEVICE_INDEX_OUT_MAX	fn_parse.h	/^        PEC_DEVICE_INDEX_OUT_MAX,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_DEVICE_NOT_ARRAY	fn_parse.h	/^        PEC_DEVICE_NOT_ARRAY,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_ERROR	fn_parse.h	/^        PEC_ERROR,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_ILLEGAL_ADDR_IP	fn_parse.h	/^        PEC_ILLEGAL_ADDR_IP,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_ILLEGAL_ADDR_PORT	fn_parse.h	/^        PEC_ILLEGAL_ADDR_PORT,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_ILLEGAL_CHARACTER	fn_parse.h	/^        PEC_ILLEGAL_CHARACTER,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_ILLEGAL_KEY	fn_parse.h	/^        PEC_ILLEGAL_KEY,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_NONE	fn_parse.h	/^        PEC_NONE, $/;"	e	enum:FNLog::ParseErrorCode
+PEC_NOT_CLOSURE	fn_parse.h	/^        PEC_NOT_CLOSURE,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_NO_ANY_CHANNEL	fn_parse.h	/^        PEC_NO_ANY_CHANNEL,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_UNDEFINED_CHANNEL_KEY	fn_parse.h	/^        PEC_UNDEFINED_CHANNEL_KEY,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_UNDEFINED_DEVICE_KEY	fn_parse.h	/^        PEC_UNDEFINED_DEVICE_KEY,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_UNDEFINED_DEVICE_TYPE	fn_parse.h	/^        PEC_UNDEFINED_DEVICE_TYPE,$/;"	e	enum:FNLog::ParseErrorCode
+PEC_UNDEFINED_GLOBAL_KEY	fn_parse.h	/^        PEC_UNDEFINED_GLOBAL_KEY,$/;"	e	enum:FNLog::ParseErrorCode
+PK_LOGGER_DESC	fn_parse.h	/^        PK_LOGGER_DESC,$/;"	e	enum:FNLog::ReseveKey
+PRIORITY_ALARM	my_define.h	/^		PRIORITY_ALARM,$/;"	e	enum:FNLog::LogPriority
+PRIORITY_DEBUG	my_define.h	/^		PRIORITY_DEBUG,$/;"	e	enum:FNLog::LogPriority
+PRIORITY_ERROR	my_define.h	/^		PRIORITY_ERROR,$/;"	e	enum:FNLog::LogPriority
+PRIORITY_FATAL	my_define.h	/^		PRIORITY_FATAL,$/;"	e	enum:FNLog::LogPriority
+PRIORITY_INFO	my_define.h	/^		PRIORITY_INFO,$/;"	e	enum:FNLog::LogPriority
+PRIORITY_MAX	fn_fmt.h	/^    static_assert(sizeof(PRIORITY_RENDER) \/ sizeof(PriorityRender) == PRIORITY_MAX, "");$/;"	m	namespace:FNLog
+PRIORITY_MAX	my_define.h	/^		PRIORITY_MAX$/;"	e	enum:FNLog::LogPriority
+PRIORITY_RENDER	fn_fmt.h	/^    static const PriorityRender PRIORITY_RENDER[] =		\/\/ 其它文件也会用$/;"	m	namespace:FNLog
+PRIORITY_TRACE	my_define.h	/^		PRIORITY_TRACE = 0,$/;"	e	enum:FNLog::LogPriority
+PRIORITY_WARN	my_define.h	/^		PRIORITY_WARN,$/;"	e	enum:FNLog::LogPriority
+PackAlarm	fn_macro.h	57;"	d
+PackDebug	fn_macro.h	53;"	d
+PackError	fn_macro.h	56;"	d
+PackFatal	fn_macro.h	58;"	d
+PackInfo	fn_macro.h	54;"	d
+PackTrace	fn_macro.h	52;"	d
+PackWarn	fn_macro.h	55;"	d
+ParseAddres	fn_parse.cpp	/^	void ParseAddres(const char* begin, const char* end, long long & ip, long long& port)$/;"	f	namespace:FNLog
+ParseAddresIP	fn_parse.cpp	/^	std::pair<long long, const char*> ParseAddresIP(const char* begin, const char* end)$/;"	f	namespace:FNLog
+ParseAndStartLogger	fn_startlog.cpp	/^	 int ParseAndStartLogger(Logger& logger, const std::string& config_content)$/;"	f	namespace:FNLog
+ParseBitArray	fn_parse.cpp	/^	unsigned long long ParseBitArray(const char* begin, const char* end)$/;"	f	namespace:FNLog
+ParseBool	fn_parse.cpp	/^	bool ParseBool(const char* begin, const char* end)$/;"	f	namespace:FNLog
+ParseChannel	fn_parse.cpp	/^	int ParseChannel(LexState& ls, Channel& channel, int indent)$/;"	f	namespace:FNLog
+ParseChannelType	fn_parse.cpp	/^	ChannelType ParseChannelType(const char* begin, const char* end)$/;"	f	namespace:FNLog
+ParseDevice	fn_parse.cpp	/^	int ParseDevice(LexState& ls, Device& device, int indent)$/;"	f	namespace:FNLog
+ParseErrorCode	fn_parse.h	/^    enum ParseErrorCode$/;"	g	namespace:FNLog
+ParseLogger	fn_parse.cpp	/^	int ParseLogger(LexState& ls, const std::string& text)$/;"	f	namespace:FNLog
+ParseNumber	fn_parse.cpp	/^	long long ParseNumber(const char* begin, const char* end)$/;"	f	namespace:FNLog
+ParseOutType	fn_parse.cpp	/^	DeviceOutType ParseOutType(const char* begin, const char* end)$/;"	f	namespace:FNLog
+ParsePriority	fn_parse.cpp	/^	LogPriority ParsePriority(const char* begin, const char* end)$/;"	f	namespace:FNLog
+ParseReserve	fn_parse.cpp	/^	ReseveKey ParseReserve(const char* begin, const char* end)$/;"	f	namespace:FNLog
+ParseString	fn_parse.cpp	/^	bool ParseString(const char* begin, const char* end, char * buffer, int buffer_len, int& write_len)$/;"	f	namespace:FNLog
+PriorityRender	fn_fmt.h	/^    struct PriorityRender$/;"	s	namespace:FNLog
+PushChannel	fn_channel.cpp	/^	int PushChannel(Logger& logger, int channel_id, int hold_idx)$/;"	f	namespace:FNLog
+PushLog	fn_core.cpp	/^    int PushLog(Logger& logger, int channel_id, int hold_idx, bool state_safly_env )$/;"	f	namespace:FNLog
+QINSTALL	Makefile	/^QINSTALL      = \/opt\/bin\/qmake -install qinstall$/;"	m
+QINSTALL_PROGRAM	Makefile	/^QINSTALL_PROGRAM = \/opt\/bin\/qmake -install qinstall -exe$/;"	m
+QMAKE	Makefile	/^QMAKE         = \/opt\/bin\/qmake$/;"	m
+QMAKE_TARGET	Makefile	/^QMAKE_TARGET  = fn_log$/;"	m
+RANLIB	Makefile	/^RANLIB        = $/;"	m
+RK_CATEGORY	fn_parse.h	/^        RK_CATEGORY,$/;"	e	enum:FNLog::ReseveKey
+RK_CATEGORY_EXTEND	fn_parse.h	/^        RK_CATEGORY_EXTEND,$/;"	e	enum:FNLog::ReseveKey
+RK_CATEGORY_FILTER	fn_parse.h	/^        RK_CATEGORY_FILTER,$/;"	e	enum:FNLog::ReseveKey
+RK_CHANNEL	fn_parse.h	/^        RK_CHANNEL,$/;"	e	enum:FNLog::ReseveKey
+RK_DEVICE	fn_parse.h	/^        RK_DEVICE,$/;"	e	enum:FNLog::ReseveKey
+RK_DISABLE	fn_parse.h	/^        RK_DISABLE,$/;"	e	enum:FNLog::ReseveKey
+RK_FILE	fn_parse.h	/^        RK_FILE,$/;"	e	enum:FNLog::ReseveKey
+RK_FILE_STUFF_UP	fn_parse.h	/^        RK_FILE_STUFF_UP,$/;"	e	enum:FNLog::ReseveKey
+RK_HOT_UPDATE	fn_parse.h	/^        RK_HOT_UPDATE,$/;"	e	enum:FNLog::ReseveKey
+RK_IDENTIFY	fn_parse.h	/^        RK_IDENTIFY,$/;"	e	enum:FNLog::ReseveKey
+RK_IDENTIFY_EXTEND	fn_parse.h	/^        RK_IDENTIFY_EXTEND,$/;"	e	enum:FNLog::ReseveKey
+RK_IDENTIFY_FILTER	fn_parse.h	/^        RK_IDENTIFY_FILTER,$/;"	e	enum:FNLog::ReseveKey
+RK_LIMIT_SIZE	fn_parse.h	/^        RK_LIMIT_SIZE,$/;"	e	enum:FNLog::ReseveKey
+RK_LOGGER_NAME	fn_parse.h	/^        RK_LOGGER_NAME,$/;"	e	enum:FNLog::ReseveKey
+RK_NULL	fn_parse.h	/^        RK_NULL,$/;"	e	enum:FNLog::ReseveKey
+RK_OUT_TYPE	fn_parse.h	/^        RK_OUT_TYPE,$/;"	e	enum:FNLog::ReseveKey
+RK_PATH	fn_parse.h	/^        RK_PATH,$/;"	e	enum:FNLog::ReseveKey
+RK_PRIORITY	fn_parse.h	/^        RK_PRIORITY,$/;"	e	enum:FNLog::ReseveKey
+RK_ROLLBACK	fn_parse.h	/^        RK_ROLLBACK,$/;"	e	enum:FNLog::ReseveKey
+RK_SHM_KEY	fn_parse.h	/^        RK_SHM_KEY,$/;"	e	enum:FNLog::ReseveKey
+RK_SYNC	fn_parse.h	/^        RK_SYNC,$/;"	e	enum:FNLog::ReseveKey
+RK_UDP_ADDR	fn_parse.h	/^        RK_UDP_ADDR,$/;"	e	enum:FNLog::ReseveKey
+RefVirtualDevice	fn_out_virtual_device.h	/^    inline VirtualDevicePtr& RefVirtualDevice()$/;"	f	namespace:FNLog
+ReseveKey	fn_parse.h	/^    enum ReseveKey$/;"	g	namespace:FNLog
+RingBuffer	fn_logger.h	/^    struct RingBuffer$/;"	s	namespace:FNLog
+SED	Makefile	/^SED           = sed$/;"	m
+SHMLogger	fn_logger.h	/^    struct SHMLogger$/;"	s	namespace:FNLog
+SOURCES	Makefile	/^SOURCES       = main.cpp \\$/;"	m
+STRIP	Makefile	/^STRIP         = strip$/;"	m
+SYMLINK	Makefile	/^SYMLINK       = ln -f -s$/;"	m
+SetAllChannelCategory	fn_log.h	/^    inline void SetAllChannelCategory(Logger& logger, int begin, int count) { BatchSetChannelCategoryMacro(begin, count);}$/;"	f	namespace:FNLog
+SetAllChannelPriority	fn_log.h	/^    inline void SetAllChannelPriority(Logger& logger, LogPriority priority) { BatchSetChannelConfig(logger, CHANNEL_CFG_PRIORITY, priority); }$/;"	f	namespace:FNLog
+SetAllFileLimitSize	fn_log.h	/^    inline void SetAllFileLimitSize(Logger& logger, int limit) { BatchSetDeviceConfig(logger, DEVICE_OUT_FILE, DEVICE_CFG_FILE_LIMIT_SIZE, limit); }$/;"	f	namespace:FNLog
+SetAllFilePriority	fn_log.h	/^    inline void SetAllFilePriority(Logger& logger, LogPriority priority) { BatchSetDeviceConfig(logger, DEVICE_OUT_FILE, DEVICE_CFG_PRIORITY, priority); }$/;"	f	namespace:FNLog
+SetAllFilePriority	fn_log.h	/^    inline void SetAllFilePriority(Logger& logger, int begin, int count) { BatchSetDeviceCategoryMacro(DEVICE_OUT_FILE, begin, count); }$/;"	f	namespace:FNLog
+SetAllFileRollbackCount	fn_log.h	/^    inline void SetAllFileRollbackCount(Logger& logger, int rb_count) { BatchSetDeviceConfig(logger, DEVICE_OUT_FILE, DEVICE_CFG_FILE_ROLLBACK, rb_count); }$/;"	f	namespace:FNLog
+SetAllScreenCategory	fn_log.h	/^    inline void SetAllScreenCategory(Logger& logger, int begin, int count) { BatchSetDeviceCategoryMacro(DEVICE_OUT_SCREEN, begin, count); }$/;"	f	namespace:FNLog
+SetAllScreenPriority	fn_log.h	/^    inline void SetAllScreenPriority(Logger& logger, LogPriority priority) { BatchSetDeviceConfig(logger, DEVICE_OUT_SCREEN, DEVICE_CFG_PRIORITY, priority); }$/;"	f	namespace:FNLog
+SetAllUDPCategory	fn_log.h	/^    inline void SetAllUDPCategory(Logger& logger, int begin, int count) { BatchSetDeviceCategoryMacro(DEVICE_OUT_UDP, begin, count); }$/;"	f	namespace:FNLog
+SetAllUDPPriority	fn_log.h	/^    inline void SetAllUDPPriority(Logger& logger, LogPriority priority) { BatchSetDeviceConfig(logger, DEVICE_OUT_UDP, DEVICE_CFG_PRIORITY, priority); }$/;"	f	namespace:FNLog
+SetChannelConfig	fn_core.cpp	/^     void SetChannelConfig(Logger& logger, int channel_id, ChannelConfigEnum field, long long val)$/;"	f	namespace:FNLog
+SetDeviceConfig	fn_core.cpp	/^     void SetDeviceConfig(Logger& logger, int channel_id, int device_id, DeviceConfigEnum field, long long val)$/;"	f	namespace:FNLog
+SetVirtualDevice	fn_out_virtual_device.h	/^    inline void SetVirtualDevice(VirtualDevicePtr vdp)$/;"	f	namespace:FNLog
+StartChannels	fn_core.cpp	/^     int StartChannels(Logger& logger)$/;"	f	namespace:FNLog
+StartLogger	fn_startlog.cpp	/^	 int StartLogger(Logger& logger)$/;"	f	namespace:FNLog
+StopChannels	fn_core.cpp	/^     int StopChannels(Logger& logger)$/;"	f	namespace:FNLog
+StopLogger	fn_startlog.cpp	/^	 int StopLogger(Logger& logger)$/;"	f	namespace:FNLog
+TAR	Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	Makefile	/^TARGET        = fn_log$/;"	m
+TransmitChannel	fn_channel.cpp	/^	int TransmitChannel(Logger& logger, int channel_id, const LogData& log)$/;"	f	namespace:FNLog
+UDPHandler	fn_file.h	/^    UDPHandler()$/;"	f	class:UDPHandler
+UDPHandler	fn_file.h	/^class UDPHandler$/;"	c
+UDPHandler	udphandler.h	/^    UDPHandler()$/;"	f	class:UDPHandler
+UDPHandler	udphandler.h	/^class UDPHandler$/;"	c
+UnloadSharedMemory	fn_load.cpp	/^    void UnloadSharedMemory(Logger& logger)$/;"	f	namespace:FNLog
+WIN32_LEAN_AND_MEAN	fn_file.h	76;"	d
+_FN_LOG_CHANNEL_H_	fn_channel.h	3;"	d
+_FN_LOG_CORE_H_	fn_core.h	3;"	d
+_FN_LOG_FILE_H_	fn_file.h	43;"	d
+_FN_LOG_LOAD_H_	fn_load.h	3;"	d
+_FN_LOG_LOG_H_	fn_log.h	3;"	d
+_FN_LOG_MACRO_H_	fn_macro.h	3;"	d
+_FN_LOG_OUT_FILE_DEVICE_H_	fn_out_file_device.h	3;"	d
+_FN_LOG_OUT_SCREEN_DEVICE_H_	fn_out_screen_device.h	3;"	d
+_FN_LOG_OUT_VIRTUAL_DEVICE_H_	fn_out_virtual_device.h	3;"	d
+_FN_LOG_PARSE_H_	fn_parse.h	3;"	d
+_FN_LOG_STREAM_H_	fn_stream.h	3;"	d
+async_threads	fn_logger.h	/^        AsyncThreads async_threads;$/;"	m	class:FNLog::Logger
+blank_	fn_parse.h	/^        int blank_;$/;"	m	struct:FNLog::Line
+block_type_	fn_parse.h	/^        int block_type_; \/\/块类型指明具体的数据类型$/;"	m	struct:FNLog::Line
+buffer_	fn_logger.h	/^        LogData buffer_[BUFFER_LEN];$/;"	m	struct:FNLog::RingBuffer
+category_	fn_logger.h	/^        int     category_; $/;"	m	struct:FNLog::LogData
+channel_id_	fn_logger.h	/^        int     channel_id_;$/;"	m	struct:FNLog::LogData
+channel_id_	fn_logger.h	/^        int  channel_id_;$/;"	m	struct:FNLog::Channel
+channel_size_	fn_logger.h	/^        int channel_size_;$/;"	m	struct:FNLog::SHMLogger
+channel_size_	fn_parse.h	/^        int channel_size_;$/;"	m	struct:FNLog::LexState
+channel_state_	fn_logger.h	/^        unsigned int channel_state_;$/;"	m	struct:FNLog::Channel
+channel_type_	fn_logger.h	/^        int  channel_type_;$/;"	m	struct:FNLog::Channel
+channels_	fn_logger.h	/^        Channels channels_;		\/\/SHMLogger 包含channel, 包含RingBuffer$/;"	m	struct:FNLog::SHMLogger
+channels_	fn_parse.h	/^        SHMLogger::Channels channels_;$/;"	m	struct:FNLog::LexState
+chunk_	fn_logger.h	/^        int chunk_;$/;"	m	struct:FNLog::Channel
+chunk_1_	filehandler.h	/^        char chunk_1_[128];$/;"	m	class:FNLog::FileHandler
+chunk_1_	fn_file.h	/^        char chunk_1_[128];$/;"	m	class:FNLog::FileHandler
+chunk_1_	fn_file.h	/^    char chunk_1_[128];$/;"	m	class:UDPHandler
+chunk_1_	fn_logger.h	/^        char chunk_1_[CHUNK_SIZE];$/;"	m	struct:FNLog::Channel
+chunk_1_	fn_logger.h	/^        char chunk_1_[CHUNK_SIZE];$/;"	m	struct:FNLog::RingBuffer
+chunk_1_	udphandler.h	/^    char chunk_1_[128];$/;"	m	class:UDPHandler
+chunk_2_	fn_logger.h	/^        char chunk_2_[CHUNK_SIZE];$/;"	m	struct:FNLog::RingBuffer
+chunk_3_	fn_logger.h	/^        char chunk_3_[CHUNK_SIZE];$/;"	m	struct:FNLog::RingBuffer
+chunk_4_	fn_logger.h	/^        char chunk_4_[CHUNK_SIZE];$/;"	m	struct:FNLog::RingBuffer
+chunk_5_	fn_logger.h	/^        char chunk_5_[CHUNK_SIZE];$/;"	m	struct:FNLog::RingBuffer
+close	filehandler.cpp	/^    void FileHandler::close()$/;"	f	class:FNLog::FileHandler
+close	fn_file.h	/^    void FileHandler::close()$/;"	f	class:FNLog::FileHandler
+close	fn_file.h	/^    void close()$/;"	f	class:UDPHandler
+close	udphandler.h	/^    void close()$/;"	f	class:UDPHandler
+code_file_	fn_logger.h	/^        const char* code_file_;$/;"	m	struct:FNLog::LogData
+code_file_len_	fn_logger.h	/^        int     code_file_len_;$/;"	m	struct:FNLog::LogData
+code_func_	fn_logger.h	/^        const char* code_func_;$/;"	m	struct:FNLog::LogData
+code_func_len_	fn_logger.h	/^        int     code_func_len_;$/;"	m	struct:FNLog::LogData
+code_line_	fn_logger.h	/^        int     code_line_;$/;"	m	struct:FNLog::LogData
+config_fields_	fn_logger.h	/^        ConfigFields config_fields_;$/;"	m	struct:FNLog::Channel
+config_fields_	fn_logger.h	/^        ConfigFields config_fields_;$/;"	m	struct:FNLog::Device
+content_	fn_logger.h	/^        char content_[LOG_SIZE]; \/\/content$/;"	m	struct:FNLog::LogData
+content_len_	fn_logger.h	/^        int content_len_;$/;"	m	struct:FNLog::LogData
+create_dir	filehandler.cpp	/^    bool FileHandler::create_dir(const std::string& path)$/;"	f	class:FNLog::FileHandler
+create_dir	fn_file.h	/^    bool FileHandler::create_dir(const std::string& path)$/;"	f	class:FNLog::FileHandler
+current_	fn_parse.h	/^        const char* current_;$/;"	m	struct:FNLog::LexState
+data_mark_	fn_logger.h	/^        std::atomic_int    data_mark_; \/\/0 invalid, 1 hold, 2 ready$/;"	m	struct:FNLog::LogData
+desc_	fn_logger.h	/^        char desc_[MAX_LOGGER_DESC_LEN];	\/\/logger 的名称和描述是0字符结尾字符串$/;"	m	class:FNLog::Logger
+desc_	fn_parse.h	/^        char desc_[Logger::MAX_LOGGER_DESC_LEN];$/;"	m	struct:FNLog::LexState
+desc_len_	fn_logger.h	/^        int desc_len_;$/;"	m	class:FNLog::Logger
+desc_len_	fn_parse.h	/^        int desc_len_;$/;"	m	struct:FNLog::LexState
+device_id_	fn_logger.h	/^        int device_id_;$/;"	m	struct:FNLog::Device
+device_size_	fn_logger.h	/^        int device_size_;$/;"	m	struct:FNLog::Channel
+devices_	fn_logger.h	/^        Device devices_[MAX_DEVICE_SIZE]; \/\/channel 包含device,最多20个$/;"	m	struct:FNLog::Channel
+end_	fn_parse.h	/^        const char* end_;$/;"	m	struct:FNLog::LexState
+file_	filehandler.h	/^        FILE* file_;$/;"	m	class:FNLog::FileHandler
+file_	fn_file.h	/^        FILE* file_;$/;"	m	class:FNLog::FileHandler
+file_handles_	fn_logger.h	/^        FileHandles file_handles_;$/;"	m	class:FNLog::Logger
+first_	fn_parse.h	/^        const char* first_;$/;"	m	struct:FNLog::LexState
+flush	filehandler.cpp	/^    void FileHandler::flush()$/;"	f	class:FNLog::FileHandler
+flush	fn_file.h	/^    void FileHandler::flush()$/;"	f	class:FNLog::FileHandler
+handler_	fn_file.h	/^    FNLOG_SOCKET handler_;$/;"	m	class:UDPHandler
+handler_	udphandler.h	/^    FNLOG_SOCKET handler_;$/;"	m	class:UDPHandler
+hold_idx_	fn_logger.h	/^        std::atomic_int hold_idx_;$/;"	m	struct:FNLog::RingBuffer
+hold_idx_	fn_stream.h	/^        int hold_idx_ = -1;\/\/ring buffer  $/;"	m	class:FNLog::LogStream
+hot_update_	fn_logger.h	/^        bool hot_update_;$/;"	m	class:FNLog::Logger
+hot_update_	fn_parse.h	/^        bool hot_update_;$/;"	m	struct:FNLog::LexState
+identify_	fn_logger.h	/^        long long     identify_;$/;"	m	struct:FNLog::LogData
+is_dir	filehandler.cpp	/^    bool FileHandler::is_dir(const std::string& path)$/;"	f	class:FNLog::FileHandler
+is_dir	fn_file.h	/^    bool FileHandler::is_dir(const std::string& path)$/;"	f	class:FNLog::FileHandler
+is_file	filehandler.cpp	/^    bool FileHandler::is_file(const std::string& path)$/;"	f	class:FNLog::FileHandler
+is_file	fn_file.h	/^    bool FileHandler::is_file(const std::string& path)$/;"	f	class:FNLog::FileHandler
+is_open	filehandler.cpp	/^    bool FileHandler::is_open()$/;"	f	class:FNLog::FileHandler
+is_open	fn_file.h	/^    bool FileHandler::is_open()$/;"	f	class:FNLog::FileHandler
+is_open	fn_file.h	/^    bool is_open()$/;"	f	class:UDPHandler
+is_open	udphandler.h	/^    bool is_open()$/;"	f	class:UDPHandler
+key_	fn_parse.h	/^        int key_;		\/\/哪种保留的key?$/;"	m	struct:FNLog::Line
+key_begin_	fn_parse.h	/^        const char* key_begin_;$/;"	m	struct:FNLog::Line
+key_end_	fn_parse.h	/^        const char* key_end_;$/;"	m	struct:FNLog::Line
+last_hot_check_	fn_logger.h	/^        time_t last_hot_check_;$/;"	m	struct:FNLog::Channel
+line_	fn_parse.h	/^        Line line_;$/;"	m	struct:FNLog::LexState
+line_number_	fn_parse.h	/^        int line_number_;$/;"	m	struct:FNLog::LexState
+line_type_	fn_parse.h	/^        int line_type_;	\/\/行类型是什么? 注释行或者其它类型$/;"	m	struct:FNLog::Line
+log_data_	fn_stream.h	/^        LogData * log_data_ = nullptr;$/;"	m	class:FNLog::LogStream
+log_fields_	fn_logger.h	/^        LogFields log_fields_;$/;"	m	struct:FNLog::Channel
+log_fields_	fn_logger.h	/^        LogFields log_fields_;$/;"	m	struct:FNLog::Device
+logger_	fn_stream.h	/^        Logger* logger_ = nullptr;$/;"	m	class:FNLog::LogStream
+logger_state_	fn_logger.h	/^        unsigned int logger_state_;			\/\/logger 状态$/;"	m	class:FNLog::Logger
+main	main.cpp	/^int main()$/;"	f
+mutex_	fn_atomic.h	/^				Mutex& mutex_;$/;"	m	class:FNLog::AutoGuard
+name_	fn_logger.h	/^        char name_[MAX_LOGGER_NAME_LEN];$/;"	m	class:FNLog::Logger
+name_	fn_parse.h	/^        char name_[Logger::MAX_LOGGER_NAME_LEN];$/;"	m	struct:FNLog::LexState
+name_len_	fn_logger.h	/^        int name_len_;$/;"	m	class:FNLog::Logger
+name_len_	fn_parse.h	/^        int name_len_;$/;"	m	struct:FNLog::LexState
+noop_	fn_atomic.h	/^				bool noop_;$/;"	m	class:FNLog::AutoGuard
+open	filehandler.cpp	/^    long FileHandler::open(const char* path, const char* mod, struct stat& file_stat)$/;"	f	class:FNLog::FileHandler
+open	fn_file.h	/^    long FileHandler::open(const char* path, const char* mod, struct stat& file_stat)$/;"	f	class:FNLog::FileHandler
+open	fn_file.h	/^    void open()$/;"	f	class:UDPHandler
+open	udphandler.h	/^    void open()$/;"	f	class:UDPHandler
+operator <<	fn_stream.h	/^        LogStream & operator << (int val) { return (*this << (long long)val); }$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator << (long val) { return (*this << (long long)val); }$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator << (short val) { return (*this << (long long)val); }$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator << (unsigned char ch) { return (*this << (unsigned long long)ch); }$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator << (unsigned int val) { return (*this << (unsigned long long)val); }$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator << (unsigned long val) { return (*this << (unsigned long long)val); }$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator << (unsigned short val) { return (*this << (unsigned long long)val); }$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator <<(const LogBlankAlign<BLANK_SIZE>& blanks)$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator <<(const LogPercent& blanks)$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator <<(const std::basic_string<char, _Traits, _Allocator> & str) { return write_buffer(str.c_str(), (int)str.length());}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator <<(const std::deque<_Elem, _Alloc> & val) { return write_container(val, "deque:", sizeof("deque:") - 1);}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator <<(const std::list<_Elem, _Alloc> & val) { return write_container(val, "list:", sizeof("list:") - 1);}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator <<(const std::map<_Key, _Tp, _Compare, _Allocator> & val) { return write_container(val, "map:", sizeof("map:") - 1);}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator <<(const std::set<_Key, _Compare, _Allocator> & val) { return write_container(val, "set:", sizeof("set:") - 1);}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream & operator <<(const std::vector<_Elem, _Alloc> & val) { return write_container(val, "vector:", sizeof("vector:") - 1);}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator << (bool val) { return (val ? write_buffer("true", 4) : write_buffer("false", 5)); }$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator << (char ch) { return write_buffer(&ch, 1);}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator << (double df)$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator << (float f)$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator << (long long integer){ return write_longlong<0>(integer);}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator << (unsigned long long integer){return write_ulonglong<0>(integer);}$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator <<(const char* cstr)$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator <<(const std::unordered_map<_Key, _Tp, _Hash, _Compare, _Allocator>& val)$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator <<(const std::unordered_set<_Key, _Hash, _Compare, _Allocator> & val)$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator <<(const void* ptr)$/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        LogStream& operator <<(std::nullptr_t) $/;"	f	class:FNLog::LogStream
+operator <<	fn_stream.h	/^        inline LogStream & operator <<(const std::pair<_Ty1, _Ty2> & val){ return *this << '<' <<val.first << ':' << val.second << '>'; }$/;"	f	class:FNLog::LogStream
+other	fn_stream.h	/^        LogStream(const LogStream& other) = delete;$/;"	m	class:FNLog::LogStream
+out_file_	fn_logger.h	/^        char out_file_[MAX_LOGGER_NAME_LEN];$/;"	m	struct:FNLog::Device
+out_path_	fn_logger.h	/^        char out_path_[MAX_PATH_LEN];$/;"	m	struct:FNLog::Device
+out_type_	fn_logger.h	/^        unsigned int out_type_;$/;"	m	struct:FNLog::Device
+precise_	fn_logger.h	/^        int precise_; \/\/create time millionsecond suffix$/;"	m	struct:FNLog::LogData
+prefix_len_	fn_logger.h	/^        int prefix_len_;$/;"	m	struct:FNLog::LogData
+priority_	fn_logger.h	/^        int     priority_;$/;"	m	struct:FNLog::LogData
+priority_len_	fn_fmt.h	/^        int priority_len_;$/;"	m	struct:FNLog::PriorityRender
+priority_name_	fn_fmt.h	/^        const char* const priority_name_;$/;"	m	struct:FNLog::PriorityRender
+proc_idx_	fn_logger.h	/^        std::atomic_int proc_idx_;$/;"	m	struct:FNLog::RingBuffer
+process_id	filehandler.cpp	/^    std::string FileHandler::process_id()$/;"	f	class:FNLog::FileHandler
+process_id	fn_file.h	/^    std::string FileHandler::process_id()$/;"	f	class:FNLog::FileHandler
+process_name	filehandler.cpp	/^    std::string FileHandler::process_name()$/;"	f	class:FNLog::FileHandler
+process_name	fn_file.h	/^    std::string FileHandler::process_name()$/;"	f	class:FNLog::FileHandler
+read_content	filehandler.cpp	/^    std::string FileHandler::read_content()$/;"	f	class:FNLog::FileHandler
+read_content	fn_file.h	/^    std::string FileHandler::read_content()$/;"	f	class:FNLog::FileHandler
+read_idx_	fn_logger.h	/^        std::atomic_int read_idx_;$/;"	m	struct:FNLog::RingBuffer
+read_line	filehandler.cpp	/^    std::string FileHandler::read_line()$/;"	f	class:FNLog::FileHandler
+read_line	fn_file.h	/^    std::string FileHandler::read_line()$/;"	f	class:FNLog::FileHandler
+read_locks_	fn_logger.h	/^        ReadLocks read_locks_;$/;"	m	class:FNLog::Logger
+remove_file	filehandler.cpp	/^    bool FileHandler::remove_file(const std::string & path)$/;"	f	class:FNLog::FileHandler
+remove_file	fn_file.h	/^    bool FileHandler::remove_file(const std::string & path)$/;"	f	class:FNLog::FileHandler
+ring_buffers_	fn_logger.h	/^        RingBuffers ring_buffers_;$/;"	m	struct:FNLog::SHMLogger
+rollback	filehandler.cpp	/^    bool FileHandler::rollback(const std::string& path, int depth, int max_depth)$/;"	f	class:FNLog::FileHandler
+rollback	fn_file.h	/^    bool FileHandler::rollback(const std::string& path, int depth, int max_depth)$/;"	f	class:FNLog::FileHandler
+scolor_	fn_fmt.h	/^        const char* const scolor_;$/;"	m	struct:FNLog::PriorityRender
+screen_lock_	fn_logger.h	/^        ScreenLock screen_lock_;$/;"	m	class:FNLog::Logger
+set_category	fn_stream.h	/^        LogStream& set_category(int category) { if (log_data_) log_data_->category_ = category;  return *this; }$/;"	f	class:FNLog::LogStream
+shm_	fn_logger.h	/^        SHMLogger* shm_;					\/\/ share memory logger 是一个结构$/;"	m	class:FNLog::Logger
+shm_id_	fn_logger.h	/^        int shm_id_;$/;"	m	struct:FNLog::SHMLogger
+shm_key_	fn_logger.h	/^        long long shm_key_;$/;"	m	class:FNLog::Logger
+shm_key_	fn_parse.h	/^        long long shm_key_;$/;"	m	struct:FNLog::LexState
+shm_size_	fn_logger.h	/^        int shm_size_; $/;"	m	struct:FNLog::SHMLogger
+short_path	filehandler.h	/^    inline int short_path(const char* path, int len)$/;"	f	namespace:FNLog
+short_path	fn_file.h	/^    inline int short_path(const char* path, int len)$/;"	f	namespace:FNLog
+state_lock	fn_logger.h	/^        StateLock state_lock;				\/\/ 声明一个状态锁变量$/;"	m	class:FNLog::Logger
+thread_	fn_logger.h	/^        unsigned int thread_;$/;"	m	struct:FNLog::LogData
+time_to_tm	filehandler.cpp	/^    struct tm FileHandler::time_to_tm(time_t t)$/;"	f	class:FNLog::FileHandler
+time_to_tm	fn_file.h	/^    struct tm FileHandler::time_to_tm(time_t t)$/;"	f	class:FNLog::FileHandler
+timestamp_	fn_logger.h	/^        long long timestamp_;        \/\/create timestamp$/;"	m	struct:FNLog::LogData
+udp_handles_	fn_logger.h	/^        UDPHandles udp_handles_;$/;"	m	class:FNLog::Logger
+v_	fn_stream.h	/^        float v_;$/;"	m	struct:FNLog::LogPercent
+val_begin_	fn_parse.h	/^        const char* val_begin_;$/;"	m	struct:FNLog::Line
+val_end_	fn_parse.h	/^        const char* val_end_;$/;"	m	struct:FNLog::Line
+virtual_device_id_	fn_logger.h	/^        int virtual_device_id_;$/;"	m	struct:FNLog::Channel
+write	filehandler.cpp	/^    void FileHandler::write(const char* data, size_t len)$/;"	f	class:FNLog::FileHandler
+write	fn_file.h	/^    void FileHandler::write(const char* data, size_t len)$/;"	f	class:FNLog::FileHandler
+write	fn_file.h	/^    void write(unsigned int ip, unsigned short port, const char* data, int len)$/;"	f	class:UDPHandler
+write	udphandler.h	/^    void write(unsigned int ip, unsigned short port, const char* data, int len)$/;"	f	class:UDPHandler
+write_bin_unsafe	fn_fmt.cpp	/^    int write_bin_unsafe(char* dst, long long number)$/;"	f	namespace:FNLog
+write_bin_unsafe	fn_fmt.cpp	/^    int write_bin_unsafe(char* dst, unsigned long long number)$/;"	f	namespace:FNLog
+write_binary	fn_stream.h	/^        LogStream& write_binary(const char* dst, int len)$/;"	f	class:FNLog::LogStream
+write_buffer	fn_stream.h	/^        LogStream& write_buffer(const char* src, int src_len)$/;"	f	class:FNLog::LogStream
+write_buffer_unsafe	fn_stream.h	/^        LogStream& write_buffer_unsafe(const char* src, int src_len)$/;"	f	class:FNLog::LogStream
+write_char_unsafe	fn_stream.h	/^        LogStream& write_char_unsafe(char ch)$/;"	f	class:FNLog::LogStream
+write_container	fn_stream.h	/^        LogStream& write_container(const Container& container, const char* name, int len)$/;"	f	class:FNLog::LogStream
+write_date_unsafe	fn_fmt.cpp	/^    int write_date_unsafe(char* dst, long long timestamp, unsigned int precise)$/;"	f	namespace:FNLog
+write_dec_unsafe	fn_fmt.cpp	/^    int write_dec_unsafe(char* dst, long long number)$/;"	f	namespace:FNLog
+write_dec_unsafe	fn_fmt.cpp	/^    int write_dec_unsafe(char* dst, unsigned long long number)$/;"	f	namespace:FNLog
+write_double_unsafe	fn_fmt.cpp	/^    int write_double_unsafe(char* dst, double number)$/;"	f	namespace:FNLog
+write_float_unsafe	fn_fmt.cpp	/^    int write_float_unsafe(char* dst, float number)$/;"	f	namespace:FNLog
+write_hex_unsafe	fn_fmt.cpp	/^    int write_hex_unsafe(char* dst, long long number)$/;"	f	namespace:FNLog
+write_hex_unsafe	fn_fmt.cpp	/^    int write_hex_unsafe(char* dst, unsigned long long number)$/;"	f	namespace:FNLog
+write_idx_	fn_logger.h	/^        std::atomic_int write_idx_;$/;"	m	struct:FNLog::RingBuffer
+write_log_priority_unsafe	fn_fmt.cpp	/^    int write_log_priority_unsafe(char* dst, int priority)$/;"	f	namespace:FNLog
+write_log_thread_unsafe	fn_fmt.cpp	/^    int write_log_thread_unsafe(char* dst, unsigned int thread_id)$/;"	f	namespace:FNLog
+write_longlong	fn_stream.h	/^        LogStream& write_longlong(long long n)$/;"	f	class:FNLog::LogStream
+write_number	fn_stream.h	/^        LogStream& write_number(N n)$/;"	f	class:FNLog::LogStream
+write_pointer	fn_stream.h	/^        LogStream& write_pointer(const void* ptr)$/;"	f	class:FNLog::LogStream
+write_pointer_unsafe	fn_fmt.cpp	/^    int write_pointer_unsafe(char* dst, const void* ptr)$/;"	f	namespace:FNLog
+write_ulonglong	fn_stream.h	/^        LogStream& write_ulonglong(unsigned long long n)$/;"	f	class:FNLog::LogStream
+yaml_mtime_	fn_logger.h	/^        time_t yaml_mtime_;$/;"	m	struct:FNLog::Channel
+yaml_path_	fn_logger.h	/^        std::string yaml_path_;$/;"	m	class:FNLog::Logger
+~FileHandler	filehandler.cpp	/^    FileHandler::~FileHandler()$/;"	f	class:FNLog::FileHandler
+~FileHandler	fn_file.h	/^    FileHandler::~FileHandler()$/;"	f	class:FNLog::FileHandler
+~LogStream	fn_stream.h	/^        ~LogStream()$/;"	f	class:FNLog::LogStream
+~Logger	fn_logger.cpp	/^	Logger::~Logger()$/;"	f	class:FNLog::Logger
+~UDPHandler	fn_file.h	/^    ~UDPHandler()$/;"	f	class:UDPHandler
+~UDPHandler	udphandler.h	/^    ~UDPHandler()$/;"	f	class:UDPHandler

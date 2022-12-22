@@ -1,0 +1,30 @@
+src.prj=$PWD CD=. filter="*.h *.cpp" {
+ filehandler.h
+ fn_channel.h
+ fn_core.h
+ fn_data.h
+ fn_file.h
+ fn_fmt.h
+ fn_load.h
+ fn_log.h
+ fn_logger.h
+ fn_macro.h
+ fn_out_file_device.h
+ fn_out_screen_device.h
+ fn_out_udp_device.h
+ fn_out_virtual_device.h
+ fn_parse.h
+ fn_startlog.h
+ fn_stream.h
+ my_define.h
+ udphandler.h
+ filehandler.cpp
+ fn_channel.cpp
+ fn_core.cpp
+ fn_fmt.cpp
+ fn_load.cpp
+ fn_logger.cpp
+ fn_parse.cpp
+ fn_startlog.cpp
+ main.cpp
+}
